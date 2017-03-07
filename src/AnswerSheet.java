@@ -13,6 +13,10 @@ public class AnswerSheet {
 	public ArrayList<String> getAnswers() {
 		return answers;
 	}
+	
+	public String getAnswer(int index) {
+		return answers.get(index);
+	}
 
 	public void setAnswers(ArrayList<String> answers) {
 		this.answers = answers;
