@@ -28,6 +28,7 @@ public class OpticalMarkReader {
 					darkestIndex = j;
 				}
 			}
+//			System.out.println("Darkest Value: "+darkestVal);
 			answerSheet.addAnswer(darkestIndex);
 		}
 		
@@ -36,13 +37,11 @@ public class OpticalMarkReader {
 		return answerSheet;
 	}
 	
-	private int valSumAt(int row, int col, PImage image) {
+	public int valSumAt(int row, int col, PImage image) {
 		int sum = 0;
-		for(int i = row; i < row+BUBBLE_HEIGHT; i++){
-			for(int j = col; j < col+BUBBLE_WIDTH; j++){
+		for(int i = row; i < row+BUBBLE_HEIGHT; i++)
+			for(int j = col; j < col+BUBBLE_WIDTH; j++)
 				sum += getPixelAt(i, j, image);
-			}
-		}
 		return sum;
 	}
 
